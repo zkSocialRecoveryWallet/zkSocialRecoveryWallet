@@ -80,6 +80,7 @@ In the event that an owner loses their private key, guardians can be notified an
 - Any guardian calls `executeRecovery` to change the nominee of the wallet.
 
 <a name="guardian-management"/>
+
 #### Guardian Management Flow for an Owner
 Owners have the ability to swap out guardians in the case that a guardian's keys are compromised or a guardian becomes malicious. 
 - Owner calls `removeGuardian` or ``removeGuardians` with hash of a guardian's. 
