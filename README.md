@@ -1,5 +1,4 @@
 # zkSocialRecoveryWallet <!-- omit in toc -->
-![zkSocialRecoveryWalletImage](https://user-images.githubusercontent.com/52170174/164951489-8f3d9b0a-4334-4dfb-b0d6-b6a87ff81424.png)
 
 zk-SocialRecoveryWallet is a smart contract wallet using zk-SNARKS to restore a user's access to their smart contract wallet, without revealing any information of the user's and guardians.
 
