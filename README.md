@@ -26,12 +26,11 @@ zkSocialRecoveryWallet Demo Video:
   - [Run circuits](#run-circuits)
   - [Run contracts](#run-contracts)
   - [Run zkgames-ui](#run-zkgames-ui)
-- [Sources](#sources)
 
 ## Background
 
 ### What is social recovery
-Social recovery is a smart contract wallet technique whereby a user is able to grant trusted persons the ability to restore the user access to their account. This is useful in case the user accidentally gets locked out of their account - access can simply be restored and the user is able to again access their account. See also this blog post pf Vitalik Buterin: [Why we need wide adoption of social recovery wallets](https://vitalik.ca/general/2021/01/11/recovery.html)
+Social recovery is a smart contract wallet technique whereby a user is able to grant trusted persons the ability to restore the user access to their account. This is useful in case the user accidentally gets locked out of their account - access can simply be restored and the user is able to again access their account. See also this blog post of Vitalik Buterin: [Why we need wide adoption of social recovery wallets](https://vitalik.ca/general/2021/01/11/recovery.html)
 
 
 
@@ -53,7 +52,3 @@ The [contracts folder](/contracts/) contains all the smart contracts used in zkG
 
 To learn more about the zkGames smart contracts, read the [README file](/contracts/README.md) inside the `contracts` folder.
 
-## Sources
-- [Why we need wide adoption of social recovery wallets](https://vitalik.ca/general/2021/01/11/recovery.html)
-- [EIP-2535: Diamonds, Multi-Facet Proxy](https://eips.ethereum.org/EIPS/eip-2535)
-- [Diamond storage pattern](https://medium.com/1milliondevs/new-storage-layout-for-proxy-contracts-and-diamonds-98d01d0eadb)
