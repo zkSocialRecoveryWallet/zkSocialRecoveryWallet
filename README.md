@@ -14,6 +14,11 @@ zkSocialRecoveryWallet Demo Video:
 
 - [Background](#background)
   - [What is social recovery](#social-recovery)
+  - [This project](#this-project)
+    - [Guardian Registration flow](#guardian-registration)
+    - [Regular flow for a Owner](#owner-flow)
+    - [Recovery Flow for Guardians](#recovery-flow)
+    - [Guardian Management Flow for an Owner](#guardian-management)
 - [Project Structure](#project-structure)
   - [circuits](#circuits)
   - [contracts](#contracts)
