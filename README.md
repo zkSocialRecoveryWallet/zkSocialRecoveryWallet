@@ -15,6 +15,7 @@ zkSocialRecoveryWallet Demo Video:
 - [Background](#background)
   - [What is social recovery](#social-recovery)
   - [Our approach](#our-approach)
+    - [Overview](#flow-overview) 
     - [Guardian Registration flow](#guardian-registration)
     - [Regular flow for a Owner](#owner-flow)
     - [Recovery Flow for Guardians](#recovery-flow)
@@ -52,6 +53,11 @@ The image below describes the flow of a social recovery wallet. A single owner i
 The previous approach places the Ethereum address of the guardian in plain text on-chain. We seek to instead keep the guardian address private, whilst still allowing social recovery functionality.
 
 To do this, when a user is adding a guardian, using zero knowledge addMembers() with Semaphore. Semaphore allows Ethereum users to prove their membership of a group and send signals such as votes or endorsements without revealing their original identity. 
+
+<a name="flow-overview"/>
+
+#### Overview
+![FLow overview](flow-overview.png)
 
 <a name="guardian-registration"/>
 
