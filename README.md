@@ -32,7 +32,10 @@ zkSocialRecoveryWallet Demo Video:
 ### What is social recovery
 Social recovery is a smart contract wallet technique whereby a user is able to grant trusted persons the ability to restore the user access to their account. This is useful in case the user accidentally gets locked out of their account - access can simply be restored and the user is able to again access their account. See also this blog post of Vitalik Buterin: [Why we need wide adoption of social recovery wallets](https://vitalik.ca/general/2021/01/11/recovery.html)
 
+### This project
+The previous approach places the Ethereum address of the guardian in plain text on-chain. We seek to instead keep the guardian address private, whilst still allowing social recovery functionality.
 
+To do this, when a user is adding a guardian, using zero knowledge, Semaphore allows Ethereum users to prove their membership of a group and send signals such as votes or endorsements without revealing their original identity. 
 
 ## Project Structure
 
