@@ -25,7 +25,7 @@ zkSocialRecoveryWallet Demo Video:
   - [Clone the Repository](#clone-the-repository)
   - [Run circuits](#run-circuits)
   - [Run contracts](#run-contracts)
-  - [Run zkgames-ui](#run-zkgames-ui)
+
 
 ## Background
 
@@ -35,7 +35,7 @@ Social recovery is a smart contract wallet technique whereby a user is able to g
 ### This project
 The previous approach places the Ethereum address of the guardian in plain text on-chain. We seek to instead keep the guardian address private, whilst still allowing social recovery functionality.
 
-To do this, when a user is adding a guardian, using zero knowledge, Semaphore allows Ethereum users to prove their membership of a group and send signals such as votes or endorsements without revealing their original identity. 
+To do this, when a user is adding a guardian, using zero knowledge addmembers wit Semaphore. Semaphore allows Ethereum users to prove their membership of a group and send signals such as votes or endorsements without revealing their original identity. 
 
 ## Project Structure
 
