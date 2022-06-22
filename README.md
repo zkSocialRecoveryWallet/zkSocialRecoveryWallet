@@ -14,7 +14,7 @@ zkSocialRecoveryWallet Demo Video:
 
 - [Background](#background)
   - [What is social recovery](#social-recovery)
-  - [This project](#this-project)
+  - [Our approach](#this-project)
     - [Guardian Registration flow](#guardian-registration)
     - [Regular flow for a Owner](#owner-flow)
     - [Recovery Flow for Guardians](#recovery-flow)
@@ -46,27 +46,27 @@ The image below describes the flow of a social recovery wallet. A single owner i
 
 ![image](https://user-images.githubusercontent.com/97858468/153685332-03d92feb-140f-43e4-b8be-6e455206d6cc.png)
 
-### This project
+## Our approach
 The previous approach places the Ethereum address of the guardian in plain text on-chain. We seek to instead keep the guardian address private, whilst still allowing social recovery functionality.
 
 To do this, when a user is adding a guardian, using zero knowledge addMembers() with Semaphore. Semaphore allows Ethereum users to prove their membership of a group and send signals such as votes or endorsements without revealing their original identity. 
 
-#### Guardian Registration flow
+### Guardian Registration flow
 - Guardian register to **register-service**
 - Guardian sign with identitycommitment
 - After approval, the identitycommitment of the guardian is saves in the **factory contract**
 
-#### Regular flow for a Owner
+### Regular flow for a Owner
 Social recovery wallets are meant to minimze the burden that an owner faces when making transactions. Thus, the flow consists of just a call `acceptOwnership()` with the new nominee wallet address
 
-#### Recovery Flow for Guardians
+### Recovery Flow for Guardians
 In the event that an owner loses their private key, guardians can be notified and a recovery process can be kicked off. 
 - Guardian calls `initiateRecovery` with the address of the newOwner.
 - `threshold - 1` number of guardians call `supportRecovery` with the newOwner.
 - Any guardian calls `executeRecovery` to change the nominee of the wallet.
 
 
-#### Guardian Management Flow for an Owner
+### Guardian Management Flow for an Owner
 Owners have the ability to swap out guardians in the case that a guardian's keys are compromised or a guardian becomes malicious. 
 - Owner calls `removeGuardian` or ``removeGuardians` with hash of a guardian's. 
 - Owner calls `addGuardian` or `addGuardian` with the hash of the guardian's. This queues the guardian for adding – the guardian can only be added after a time delay of 3 days. 
