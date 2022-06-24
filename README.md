@@ -78,18 +78,10 @@ To do this, when a user is adding a guardian, using zero knowledge addGuardians(
 - Guardian sign with identitycommitment
 - After approval, the identitycommitment of the guardian is saves in the **factory contract**
 
-<a name="guardian-registration"/>
-
-#### Registration Flow for Guardians
-- Guardian fill in registration form.
-- Guardian sign message with Metamask.
-
-example flow:
-
 | Step 1                                                                     | Step 2                                                                        |
 | :---                                                                       | :---                                                                          |
-|<img src="images/guardian-registration.png" alt="drawing" width="200"/>     | <img src="images/guardian-sign.png" alt="drawing" width="200"/>               |                                                
-| mongodb result:                                                            | <img src="images/mongodb-after-guardian-sign.png" alt="drawing" width="200"/> |
+|<img src="images/guardian-registration.png" alt="drawing" width="400"/>     | <img src="images/guardian-sign.png" alt="drawing" width="400"/>               |                                                
+| mongodb result:                                                            | <img src="images/mongodb-after-guardian-sign.png" alt="drawing" width="400"/> |
 
 <a name="owner-flow"/>
 
