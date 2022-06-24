@@ -1,0 +1,6 @@
+[submodule "zkWallet-contracts"]
+	path = zkWallet-contracts
+	url = https://github.com/zkSocialRecoveryWallet/zkWallet-contracts.git
+[submodule "packages/zkWallet-contracts"]
+	path = packages/zkWallet-contracts
+	url = https://github.com/zkSocialRecoveryWallet/zkWallet-contracts.git

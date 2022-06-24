@@ -1,0 +1,38 @@
+Arguments: 
+  /Users/iamdev/.nvm/versions/node/v16.13.1/bin/node /usr/local/bin/yarn add -D lerna
+
+PATH: 
+  /Users/iamdev/.nvm/versions/node/v16.13.1/bin:/Users/iamdev/.nvm/versions/node/v16.13.1/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/TeX/texbin:/usr/local/share/dotnet:~/.dotnet/tools:/Library/Apple/usr/bin:/Users/iamdev/Downloads/google-cloud-sdk/bin:/Users/iamdev/.nvm/versions/node/v16.13.1/bin:/Users/iamdev/.cargo/bin:/Users/iamdev/.foundry/bin
+
+Yarn version: 
+  1.22.10
+
+Node version: 
+  16.13.1
+
+Platform: 
+  darwin x64
+
+Trace: 
+  SyntaxError: /Users/iamdev/Documents/Harmony/zkSocialRecoveryWallet/package.json: Unexpected token } in JSON at position 419
+      at JSON.parse (<anonymous>)
+      at /usr/local/lib/node_modules/yarn/lib/cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (/usr/local/lib/node_modules/yarn/lib/cli.js:310:30)
+      at /usr/local/lib/node_modules/yarn/lib/cli.js:321:13
+
+npm manifest: 
+  {
+    "name": "zkSocialRecoveryWallet",
+    "version": "1.0.0",
+    "description": "zk-SocialRecoveryWallet is a smart contract wallet using zk-SNARKS to restore a user's access to their smart contract wallet, without revealing any information of the user's and guardians.",
+    "repository": "https://github.com/zkSocialRecoveryWallet/zkSocialRecoveryWallet",
+    "author": "IaM <DEVELOPER>",
+    "license": "Apache License 2.0",
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

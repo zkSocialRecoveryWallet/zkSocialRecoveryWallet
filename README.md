@@ -57,7 +57,7 @@ To do this, when a user is adding a guardian, using zero knowledge addMembers() 
 <a name="flow-overview"/>
 
 #### Overview
-![FLow overview](flow-overview.png)
+![FLow overview](./images/flow-overview.png)
 
 <a name="guardian-registration"/>
 
@@ -88,19 +88,98 @@ Owners have the ability to swap out guardians in the case that a guardian's keys
 
 ## Project Structure
 
-The project has three main folders:
+The project has three main folders within packages directory:
 
-- circuits
-- contracts
-- zkgames-ui
+- zkWallet-contracts/circuits
+- zkWallet-contracts/contracts
+
 
 ### circuits
 
 The [circuits folder](/circuits/) contains all the circuits used in zkSocialRecoveryWallet.
+To learn more about the zkSocialRecoveryWallet circuits, read the [README file](/packages/zkWallet-contracts/circuits/README.md) inside the `circuits` folder.
 
 ### contracts
 
-The [contracts folder](/contracts/) contains all the smart contracts used in zkGames.
+The [contracts folder](/contracts/) contains all the smart contracts used in zkSocialRecoveryWallet.
 
-To learn more about the zkGames smart contracts, read the [README file](/contracts/README.md) inside the `contracts` folder.
+To learn more about the zkSocialRecoveryWallet smart contracts, read the [README file](/packages/zkWallet-contracts/contracts/README.md) inside the `contracts` folder.
 
+
+## Zero Knowledge Structure
+
+The following graphic shows the structure of the most important zero knowledge elements of the zkSocialRecoveryWallet project.
+
+```text
+├── packages
+│   ├── zkWallet-contracts
+│   │   ├── build
+│   │   │   ├── snark-artifacts
+│   │   │   │   ├── semaphore.wasm
+│   │   │   │   ├── semaphore.zkey
+│   │   ├── circuits
+│   │   │   ├── semaphore.circom
+│   │   │   ├── ecdh.circom
+│   │   │   ├── tree
+│   │   │   │   ├── hasherPoseidon.circom
+│   │   │   │   ├── poseidon
+│   │   │   │   │   ├── poseidonHashT3.circom
+│   │   │   │   │   ├── poseidonHashT4.circom
+│   │   │   │   │   ├── poseidonHashT5.circom
+│   │   │   │   │   ├── poseidonHashT6.circom
+│   │   ├── contracts
+│   │   │   ├── contracts
+│   │   │   │   ├── facets
+│   │   │   │   │   ├── GuardianFacet.sol
+│   │   │   │   │   ├── RecoveryFacet.sol
+│   │   │   │   │   ├── SemaphoreFacet.sol
+│   │   │   │   │   ├── SemaphoreGroupsFacet.sol
+│   │   │   │   ├── recovery
+│   │   │   │   │   ├── IRecovery.sol
+│   │   │   │   │   ├── IRecoveryInternal.sol
+│   │   │   │   │   ├── Recovery.sol
+│   │   │   │   │   ├── RecoveryInternal.sol
+│   │   │   │   │   ├── RecoveryStorage.sol
+│   │   │   │   ├── semaphore
+│   │   │   │   │   ├── base
+│   │   │   │   │   │   ├── SemaphoreCoreBase
+│   │   │   │   │   │   │   ├── ISemaphoreCoreBase.sol
+│   │   │   │   │   │   │   ├── ISemaphoreCoreBaseInternal.sol
+│   │   │   │   │   │   │   ├── SemaphoreCoreBase.sol
+│   │   │   │   │   │   │   ├── SemaphoreCoreBaseInternal.sol
+│   │   │   │   │   │   │   ├── SemaphoreCoreBaseMock.sol
+│   │   │   │   │   │   │   ├── SemaphoreCoreBaseStorage.sol
+│   │   │   │   │   │   ├── SemaphoreGroupsBase
+│   │   │   │   │   │   │   ├── ISemaphoreGroupsBase.sol
+│   │   │   │   │   │   │   ├── ISemaphoreGroupsInternal.sol
+│   │   │   │   │   │   │   ├── SemaphoreGroupsBase.sol
+│   │   │   │   │   │   │   ├── SemaphoreGroupsBaseInternal.sol
+│   │   │   │   │   │   │   ├── SemaphoreGroupsBaseMock.sol
+│   │   │   │   │   │   │   ├── SemaphoreGroupsBaseStorage.sol
+│   │   │   │   │   ├── extensions
+│   │   │   │   │   │   ├── SemaphoreVoting
+│   │   │   │   │   │   │   ├── ISemaphoreVoting.sol
+│   │   │   │   │   │   │   ├── ISemaphoreVotingInternal.sol
+│   │   │   │   │   │   │   ├── SemaphoreVoting.sol
+│   │   │   │   │   │   │   ├── SemaphoreVotingInternal.sol
+│   │   │   │   │   │   │   ├── SemaphoreVotingStorage.sol
+│   │   │   │   │   ├── ISemaphore.sol
+│   │   │   │   │   ├── ISemaphoreGroups.sol
+│   │   │   │   │   ├── ISemaphoreInternal.sol
+│   │   │   │   │   ├── Semaphore.sol
+│   │   │   │   │   ├── SemaphoreInternal.sol
+│   │   │   │   │   ├── SemaphoreStorage.sol
+│   │   │   │   ├── utils
+│   │   │   │   │   ├── cryptography
+│   │   │   │   │   │   ├── IncrementalBinaryTree
+│   │   │   │   │   │   │   ├── IIncrementalBinaryTree.sol
+│   │   │   │   │   │   │   ├── IIncrementalBinaryTreeInternal.sol
+│   │   │   │   │   │   │   ├── IncrementalBinaryTreeInternal.sol
+│   │   │   │   │   │   │   ├── IncrementalBinaryTreeStorage.sol
+│   │   │   │   │   │   ├── Hashes.sol
+│   │   │   │   │   ├── Constant.sol
+│   │   │   │   ├── verifier
+│   │   │   │   │   ├── Verifier20.sol
+```
+
+To see the full directory structure of the smart contracts, see [README file](/packages/zkWallet-contracts/contracts/README.md) inside the `contracts` folder.
