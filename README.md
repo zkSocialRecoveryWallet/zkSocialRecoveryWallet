@@ -86,11 +86,10 @@ To do this, when a user is adding a guardian, using zero knowledge addGuardians(
 
 example flow:
 
-| Step 1                  | Step 2                                      |
-| :---                  | :---                                           
-|<img src="images/guardian-registration.png" alt="drawing" width="200"/>     | <img src="images/guardian-sign.png" alt="drawing" width="420"/> |                                                
-mongodb result:
-<img src="images/mongodb-after-guardian-sign.png" alt="drawing" width="400"/>
+| Step 1                                                                     | Step 2                                                                        |
+| :---                                                                       | :---                                                                          |
+|<img src="images/guardian-registration.png" alt="drawing" width="200"/>     | <img src="images/guardian-sign.png" alt="drawing" width="200"/>               |                                                
+| mongodb result:                                                            | <img src="images/mongodb-after-guardian-sign.png" alt="drawing" width="200"/> |
 
 <a name="owner-flow"/>
 
