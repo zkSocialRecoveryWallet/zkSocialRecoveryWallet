@@ -1,5 +1,7 @@
 # zkSocialRecoveryWallet <!-- omit in toc -->
 
+![zkWalletImage](images/zkWallet.jpeg)
+
 zk-SocialRecoveryWallet is a smart contract wallet using zk-SNARKS to restore a user's access to their smart contract wallet, without revealing any information of the user's and guardians.
 
 The project is currently on [Harmony Testnet](https://explorer.pops.one/) and the frontend is hosted on [Vercel](https://github.com/vercel/vercel).
