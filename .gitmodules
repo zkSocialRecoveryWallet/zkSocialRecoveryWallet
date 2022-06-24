@@ -4,3 +4,12 @@
 [submodule "packages/zkWallet-contracts"]
 	path = packages/zkWallet-contracts
 	url = https://github.com/zkSocialRecoveryWallet/zkWallet-contracts.git
+[submodule "packages/guardian-service"]
+	path = packages/guardian-service
+	url = https://github.com/zkSocialRecoveryWallet/guardian-service.git
+[submodule "packages/zkwallet-ui"]
+	path = packages/zkwallet-ui
+	url = https://github.com/zkSocialRecoveryWallet/zkwallet-ui.git
+[submodule "packages/guardians-ui"]
+	path = packages/guardians-ui
+	url = https://github.com/zkSocialRecoveryWallet/guardians-ui.git

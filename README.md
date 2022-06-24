@@ -8,7 +8,7 @@ The project is currently on [Harmony Testnet](https://explorer.pops.one/) and th
 
 zkSocialRecoveryWallet Link:
 
-<https://zkSocialRecoveryWallet.vercel.app/>
+<https://zkSocialRecoveryWallet.simplicy.io/>
 
 zkSocialRecoveryWallet Demo Video:
 
@@ -27,11 +27,15 @@ zkSocialRecoveryWallet Demo Video:
   - [contracts](#contracts)
   - [guardian-ui](#guardian-ui)
   - [wallet-ui](#wallet-ui)
-- [Zero Knowledge Structure](#zero-knowledge-structure)
+- [Zero Knowledge Structure](#zk-structure)
 - [Run Locally](#run-locally)
   - [Clone the Repository](#clone-the-repository)
+  - [Get the Submodules](#get-submodules)
   - [Run circuits](#run-circuits)
   - [Run contracts](#run-contracts)
+  - [Run Guardian Service](#run-guardian-service)
+  - [Run Guardian UI](#run-guardian-ui)
+  - [Run Wallt UI](#run-wallet-ui)
 
 
 ## Background
@@ -47,7 +51,7 @@ Social Recovery wallets are designed to mitigate against two scenarios:
 
 The image below describes the flow of a social recovery wallet. A single owner is able to sign off on transactions, but a set of guardians is able to change the owner (the signing key). 
 
-![image](https://user-images.githubusercontent.com/97858468/153685332-03d92feb-140f-43e4-b8be-6e455206d6cc.png)
+![image](images/diag2.png)
 
 <a name="our-approach"/>
 
@@ -88,6 +92,8 @@ Owners have the ability to swap out guardians in the case that a guardian's keys
 - Owner calls `removeGuardian` or ``removeGuardians` with hash of a guardian's. 
 - Owner calls `addGuardian` or `addGuardian` with the hash of the guardian's. This queues the guardian for adding – the guardian can only be added after a time delay of 3 days. 
 
+<a name="project-structure"/>
+
 ## Project Structure
 
 The project has three main folders within packages directory:
@@ -107,6 +113,7 @@ The [contracts folder](/contracts/) contains all the smart contracts used in zkS
 
 To learn more about the zkSocialRecoveryWallet smart contracts, read the [README file](/packages/zkWallet-contracts/contracts/README.md) inside the `contracts` folder.
 
+<a name="zk-structure"/>
 
 ## Zero Knowledge Structure
 
@@ -185,3 +192,76 @@ The following graphic shows the structure of the most important zero knowledge e
 ```
 
 To see the full directory structure of the smart contracts, see [README file](/packages/zkWallet-contracts/contracts/README.md) inside the `contracts` folder.
+
+<a name="run-locally"/>
+
+## Run Locally
+
+<a name="clone-the-repository"/>
+
+### Clone the epository
+
+```bash
+git clone https://github.com/zkSocialRecoveryWallet/zkSocialRecoveryWallet.git
+```
+<a name="get-submodules"/>
+
+### Get the Submodules
+
+```bash
+git submodule update --init --recursive
+```
+
+<a name="run-circuits"/>
+
+### Run circuits
+
+To run cicuits, go inside the `contract` folder:
+
+```bash
+cd packages/zkWallet-contracts/
+```
+
+Run:
+
+```bash
+yarn compile:circuits
+```
+
+See also the follow the intructions in the [README file](/packages/zkWallet-contracts/contracts/circuits/README.md) in the  **`circuits`** folder.
+
+<a name="run-contracts"/>
+
+### Run contracts
+
+To run contracts, go inside the **`contracts`** folder:
+
+```bash
+cd packages/zkWallet-contracts/
+```
+
+Then, follow the intructions in the [README file](/packages/zkWallet-contracts/README.md) in the `contracts` folder.
+
+<a name="run-guardian-service"/>
+
+### Run Guardian service
+
+To run the Guardian Service, go inside the **`guardian-service`** folder:
+
+```bash
+cd packages/guardian-service
+```
+
+Then, follow the intructions in the [README file](/packages/guardian-service/contracts/README.md) in the `contracts` folder.
+
+<a name="run-guardian-ui"/>
+
+### Run Guardian ui
+
+To run the Guardian Ui, go inside the **`guardian-ui`** folder:
+
+```bash
+cd packages/guardian-ui
+```
+
+Then, follow the intructions in the [README file](/packages/guardian-ui/README.md) in the `contracts` folder.
