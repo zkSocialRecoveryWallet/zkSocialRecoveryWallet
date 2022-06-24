@@ -1,12 +1,12 @@
-# zkSocialRecoveryWallet <!-- omit in toc -->
+# zkWallet (Social Recovery) <!-- omit in toc -->
 
 ![zkWalletImage](images/zkWallet.png)
 
-zk-SocialRecoveryWallet is a smart contract wallet using zk-SNARKS to restore a user's access to their smart contract wallet, without revealing any information of the user's and guardians.
+zkWallet is a smart contract wallet using zk-SNARKS to restore a user's access to their smart contract wallet, without revealing any information of the user's and guardians.
 
 The project is currently on [Harmony Testnet](https://explorer.pops.one/) and the frontend is hosted on [Vercel](https://github.com/vercel/vercel).
 
-zkSocialRecoveryWallet Link:
+zkWallet Link:
 
 <https://zkSocialRecoveryWallet.simplicy.io/>
 
@@ -14,7 +14,7 @@ Guardian registration Link:
 
 <https://guardian-ui.simplicy.io>
 
-zkSocialRecoveryWallet Demo Video:
+zkWallet Demo Video:
 
 ## Table of Contents <!-- omit in toc -->
 
@@ -29,8 +29,9 @@ zkSocialRecoveryWallet Demo Video:
 - [Project Structure](#project-structure)
   - [circuits](#circuits)
   - [contracts](#contracts)
+  - [guardian-service](#guardian-service)
   - [guardian-ui](#guardian-ui)
-  - [wallet-ui](#wallet-ui)
+  - [zkWallet-ui](#wallet-ui)
 - [Zero Knowledge Structure](#zk-structure)
 - [Run Locally](#run-locally)
   - [Clone the Repository](#clone-the-repository)
@@ -39,7 +40,7 @@ zkSocialRecoveryWallet Demo Video:
   - [Run contracts](#run-contracts)
   - [Run Guardian Service](#run-guardian-service)
   - [Run Guardian UI](#run-guardian-ui)
-  - [Run Wallt UI](#run-wallet-ui)
+  - [Run Wallet UI](#run-wallet-ui)
 - [Deployed contracts](#deployed-contracts)
   - [Devnet](#deployed-devnet)
   - [Testnet](#deployed-testnet)
@@ -107,22 +108,43 @@ Owners have the ability to swap out guardians in the case that a guardian's keys
 
 ## Project Structure
 
-The project has three main folders within packages directory:
+The project has five main folders within packages directory:
 
-- zkWallet-contracts/circuits
-- zkWallet-contracts/contracts
+- packages/zkWallet-contracts/circuits
+- packages/zkWallet-contracts/contracts
+- packages/guardian-service
+- packages/guardian-ui
+- packages/zkwallet-ui
 
+<a name="circuits"/>
 
 ### circuits
 
-The [circuits folder](/circuits/) contains all the circuits used in zkSocialRecoveryWallet.
+The [circuits folder](/packages/zkWallet-contracts/circuits/) contains all the circuits used in zkWallet.
 To learn more about the zkSocialRecoveryWallet circuits, read the [README file](/packages/zkWallet-contracts/circuits/README.md) inside the `circuits` folder.
+
+<a name="contracts"/>
 
 ### contracts
 
-The [contracts folder](/contracts/) contains all the smart contracts used in zkSocialRecoveryWallet.
+The [contracts folder](/packages/zkWallet-contracts/contracts) contains all the smart contracts used in zkWallet.
 
 To learn more about the zkSocialRecoveryWallet smart contracts, read the [README file](/packages/zkWallet-contracts/contracts/README.md) inside the `contracts` folder.
+
+
+<a name="guardian-service"/>
+
+### guardian-service
+The [guardian-service folder](/packages/guardian-service/) contains guardian backend build with [Nestjs](https://nestjs.com/).
+
+<a name="guardian-ui"/>
+
+### guardian-ui
+The [guardian-ui folder](/packages/guardian-ui/) contains frontend build with [Next.js](https://nextjs.org/).
+
+### zkWallet-ui
+The [zkwallet-ui folder](/packages/zkwallet-ui/) contains frontend for wallet management build with [Next.js](https://nextjs.org/).
+
 
 <a name="zk-structure"/>
 
@@ -263,7 +285,7 @@ To run the Guardian Service, go inside the **`guardian-service`** folder:
 cd packages/guardian-service
 ```
 
-Then, follow the intructions in the [README file](/packages/guardian-service/contracts/README.md) in the `contracts` folder.
+Then, follow the intructions in the [README file](/packages/guardian-service/contracts/README.md) in the `guardian-service` folder.
 
 <a name="run-guardian-ui"/>
 
@@ -275,7 +297,7 @@ To run the Guardian Ui, go inside the **`guardian-ui`** folder:
 cd packages/guardian-ui
 ```
 
-Then, follow the intructions in the [README file](/packages/guardian-ui/README.md) in the `contracts` folder.
+Then, follow the intructions in the [README file](/packages/guardian-ui/README.md) in the `guardian-ui` folder.
 
 <a name="deployed-contracts"/>
 
