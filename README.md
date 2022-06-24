@@ -1,6 +1,6 @@
 # zkSocialRecoveryWallet <!-- omit in toc -->
 
-![zkWalletImage](images/zkWallet.jpeg)
+![zkWalletImage](images/zkWallet.png)
 
 zk-SocialRecoveryWallet is a smart contract wallet using zk-SNARKS to restore a user's access to their smart contract wallet, without revealing any information of the user's and guardians.
 
@@ -276,7 +276,25 @@ Then, follow the intructions in the [README file](/packages/guardian-ui/README.m
 
  Name                   | Harmony One Testnet                             | Version |
 | :---                  | :---                                            |  :---   |
+| Alice Wallet          | 0x4537224A3332FAa4d179d6d2fcD776D4bF96fC39      | 0.0.1   |
+| Bob Wallet            | 0x93Fb183E6aFcf5193CDdc3bB5dA1b511a9909dc6      | 0.0.1   |
+| Verifier16            | 0xEC4b5d3cB604D4771473F9E58394A45619C38BB2      | 1.0.0   |
+| Verifier17            | 0x9BBCD95F0D06C6ff992E2baC305cC7C004101214      | 1.0.0   |
+| Verifier18            | 0x4cEcE384bCB377EB7a3d39449a96478f5fa5fa72      | 1.0.0   |
+| Verifier19            | 0x9671cBE0C930DC94085118dB0197e861abF74e02      | 1.0.0   |
 | Verifier20            | 0x01F5C5E69AC1bcBC41Cef0a90A43A8e5A79cFb69      | 1.0.0   |
+| Verifier21            | 0x8d2171b7dDC7F6B0f04657835a6b19F04B821353      | 1.0.0   |
+| Verifier22            | 0x64D87dC944Fb6956Ff09b4a1da2BfBFf4F78f976      | 1.0.0   |
+| Verifier23            | 0xa8007c877333508A07eA9f16CF2a2415057Ec0BC      | 1.0.0   |
+| Verifier24            | 0x434a85Da614E439929e7480464B18c1cea043B19      | 1.0.0   |
+| Verifier25            | 0x21176AA38497bdeab3CdB4368CFF53c428B001f7      | 1.0.0   |
+| Verifier26            | 0x48164EcB1CB426C72DCE0421F4426daE264724a7      | 1.0.0   |
+| Verifier27            | 0x50c3B09c4b478bd88D0ED14B056AcaFb679Bd345      | 1.0.0   |
+| Verifier28            | 0xbDc6e16F514e8d8098ABc90Ab40482d5CbD7c9Aa      | 1.0.0   |
+| Verifier29            | 0x6c3Ebf4d06e9595248fA7cc506ad87CffE445dee      | 1.0.0   |
+| Verifier30            | 0x6fCe423A2fDDe6788a27a99b59e0Cb40579CE988      | 1.0.0   |
+| Verifier31            | 0xCD81D914F1032F7d4c4AB088546c7d70A438cFC3      | 1.0.0   |
+| Verifier32            | 0x9eE3cC20Eb1e6a695192A9EDB0512694d31d81bf      | 1.0.0   |
 | PoseidonT3            | 0x18145aa8e5eb71959EaAC9Be2B383A070E80300A      | 1.0.0   |
 | ERC20Facet            |                                                 | 0.0.1   |
 | ERC721Facet           |                                                 | 0.0.1   |
