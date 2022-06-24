@@ -40,7 +40,7 @@ zkSocialRecoveryWallet Demo Video:
   - [Run Guardian Service](#run-guardian-service)
   - [Run Guardian UI](#run-guardian-ui)
   - [Run Wallt UI](#run-wallet-ui)
-
+- [Deployed contracts](#deployed-contracts)
 
 ## Background
 
@@ -269,3 +269,22 @@ cd packages/guardian-ui
 ```
 
 Then, follow the intructions in the [README file](/packages/guardian-ui/README.md) in the `contracts` folder.
+
+<a name="deployed-contracts"/>
+
+## Deployed contracts
+
+ Name                   | Harmony One Testnet                             | Version |
+| :---                  | :---                                            |  :---   |
+| Verifier20            | 0x01F5C5E69AC1bcBC41Cef0a90A43A8e5A79cFb69      | 1.0.0   |
+| PoseidonT3            | 0x18145aa8e5eb71959EaAC9Be2B383A070E80300A      | 1.0.0   |
+| ERC20Facet            |                                                 | 0.0.1   |
+| ERC721Facet           |                                                 | 0.0.1   |
+| GuardianFacet         |                                                 | 0.0.1   |
+| RecoveryFacet         |                                                 | 0.0.1   |
+| SemaphoreFacet        | 0x532E815c80198b78512858F4cf125be4858c5e9A      | 0.0.1   |
+| SemaphoreGroupsFacet  | 0x5a6A9c1412179ef061CDF328E6b66BB8c5F337B6      | 0.0.1   |
+| SemaphoreVotingFacet  | 0x5a6A9c1412179ef061CDF328E6b66BB8c5F337B6      | 0.0.1   |
+| SimplicyWalletDiamond | 0x93Fb183E6aFcf5193CDdc3bB5dA1b511a9909dc6      | 0.0.1   |
+| WalletFactoryDiamond  | 0x93Fb183E6aFcf5193CDdc3bB5dA1b511a9909dc6      | 0.0.1   |
+| WalletFactoryFacet    |                                                 | 0.0.1   |
