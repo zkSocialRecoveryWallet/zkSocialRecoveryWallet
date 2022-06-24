@@ -10,6 +10,10 @@ zkSocialRecoveryWallet Link:
 
 <https://zkSocialRecoveryWallet.simplicy.io/>
 
+Guardian registration Link:
+
+<https://guardian-ui.simplicy.io>
+
 zkSocialRecoveryWallet Demo Video:
 
 ## Table of Contents <!-- omit in toc -->

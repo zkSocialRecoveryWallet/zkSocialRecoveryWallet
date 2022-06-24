@@ -13,3 +13,6 @@
 [submodule "packages/guardians-ui"]
 	path = packages/guardians-ui
 	url = https://github.com/zkSocialRecoveryWallet/guardians-ui.git
+[submodule "packages/guardian-ui"]
+	path = packages/guardian-ui
+	url = https://github.com/zkSocialRecoveryWallet/guardian-ui.git
