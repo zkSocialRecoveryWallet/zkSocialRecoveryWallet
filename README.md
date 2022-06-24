@@ -78,6 +78,20 @@ To do this, when a user is adding a guardian, using zero knowledge addGuardians(
 - Guardian sign with identitycommitment
 - After approval, the identitycommitment of the guardian is saves in the **factory contract**
 
+<a name="guardian-registration"/>
+
+#### Registration Flow for Guardians
+- Guardian fill in registration form.
+- Guardian sign message with Metamask.
+
+example flow:
+
+| Step 1                  | Step 2                                      |
+| :---                  | :---                                           
+|<img src="images/guardian-registration.png" alt="drawing" width="200"/>     | <img src="images/guardian-sign.png" alt="drawing" width="420"/> |                                                
+mongodb result:
+<img src="images/mongodb-after-guardian-sign.png" alt="drawing" width="400"/>
+
 <a name="owner-flow"/>
 
 #### Regular flow for a Owner
@@ -320,8 +334,8 @@ Then, follow the intructions in the [README file](/packages/guardian-ui/README.m
 
  Name                   | Harmony One Testnet                             | Version |
 | :---                  | :---                                            |  :---   |
-| Alice Wallet          | 0x4537224A3332FAa4d179d6d2fcD776D4bF96fC39      | 0.0.1   |
-| Bob Wallet            | 0x93Fb183E6aFcf5193CDdc3bB5dA1b511a9909dc6      | 0.0.1   |
+| Alice Wallet          |                                                 | 0.0.1   |
+| Bob Wallet            |                                                 | 0.0.1   |
 | Verifier16            | 0xEC4b5d3cB604D4771473F9E58394A45619C38BB2      | 1.0.0   |
 | Verifier17            | 0x9BBCD95F0D06C6ff992E2baC305cC7C004101214      | 1.0.0   |
 | Verifier18            | 0x4cEcE384bCB377EB7a3d39449a96478f5fa5fa72      | 1.0.0   |
@@ -339,14 +353,14 @@ Then, follow the intructions in the [README file](/packages/guardian-ui/README.m
 | Verifier30            | 0x6fCe423A2fDDe6788a27a99b59e0Cb40579CE988      | 1.0.0   |
 | Verifier31            | 0xCD81D914F1032F7d4c4AB088546c7d70A438cFC3      | 1.0.0   |
 | Verifier32            | 0x9eE3cC20Eb1e6a695192A9EDB0512694d31d81bf      | 1.0.0   |
-| PoseidonT3            | 0x18145aa8e5eb71959EaAC9Be2B383A070E80300A      | 1.0.0   |
+| PoseidonT3            |                                                 | 1.0.0   |
 | ERC20Facet            |                                                 | 0.0.1   |
 | ERC721Facet           |                                                 | 0.0.1   |
 | GuardianFacet         |                                                 | 0.0.1   |
 | RecoveryFacet         |                                                 | 0.0.1   |
-| SemaphoreFacet        | 0x532E815c80198b78512858F4cf125be4858c5e9A      | 0.0.1   |
-| SemaphoreGroupsFacet  | 0x5a6A9c1412179ef061CDF328E6b66BB8c5F337B6      | 0.0.1   |
-| SemaphoreVotingFacet  | 0x5a6A9c1412179ef061CDF328E6b66BB8c5F337B6      | 0.0.1   |
-| SimplicyWalletDiamond | 0x93Fb183E6aFcf5193CDdc3bB5dA1b511a9909dc6      | 0.0.1   |
-| WalletFactoryDiamond  | 0x93Fb183E6aFcf5193CDdc3bB5dA1b511a9909dc6      | 0.0.1   |
+| SemaphoreFacet        |                                                 | 0.0.1   |
+| SemaphoreGroupsFacet  |                                                 | 0.0.1   |
+| SemaphoreVotingFacet  |                                                 | 0.0.1   |
+| SimplicyWalletDiamond |                                                 | 0.0.1   |
+| WalletFactoryDiamond  |                                                 | 0.0.1   |
 | WalletFactoryFacet    |                                                 | 0.0.1   |
