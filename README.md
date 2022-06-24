@@ -41,6 +41,8 @@ zkSocialRecoveryWallet Demo Video:
   - [Run Guardian UI](#run-guardian-ui)
   - [Run Wallt UI](#run-wallet-ui)
 - [Deployed contracts](#deployed-contracts)
+  - [Devnet](#deployed-devnet)
+  - [Testnet](#deployed-testnet)
 
 ## Background
 
@@ -85,16 +87,16 @@ Social recovery wallets are meant to minimze the burden that an owner faces when
 
 #### Recovery Flow for Guardians
 In the event that an owner loses their private key, guardians can be notified and a recovery process can be kicked off. 
-- Guardian calls `initiateRecovery` with the address of the newOwner.
-- `threshold - 1` number of guardians call `supportRecovery` with the newOwner.
-- Any guardian calls `executeRecovery` to change the nominee of the wallet.
+- Guardian calls `**recover**` with the address of the newOwner.
+- `majority` number of guardians call `recover` with the newOwner.
+- If majority agreed with the newOwner, the new owner address will become a nominee wallet address
 
 <a name="guardian-management"/>
 
 #### Guardian Management Flow for an Owner
 Owners have the ability to swap out guardians in the case that a guardian's keys are compromised or a guardian becomes malicious. 
 - Owner calls `removeGuardian` or ``removeGuardians` with hash of a guardian's. 
-- Owner calls `addGuardian` or `addGuardian` with the hash of the guardian's. This queues the guardian for adding – the guardian can only be added after a time delay of 3 days. 
+- Owner calls `addGuardian` or `addGuardians` with the hash of the guardian's. This queues the guardian for adding – the guardian can only be added after a time delay of 3 days. 
 
 <a name="project-structure"/>
 
@@ -273,6 +275,48 @@ Then, follow the intructions in the [README file](/packages/guardian-ui/README.m
 <a name="deployed-contracts"/>
 
 ## Deployed contracts
+
+<a name="deployed-devnet"/>
+
+### Devnet
+
+ Name                   | Harmony One Devnet                              | Version |
+| :---                  | :---                                            |  :---   |
+| Alice Wallet          | 0xc0355786e16524c45D2d3289ba6F458698DA7a5F      | 0.0.1   |
+| Bob Wallet            | 0xeAC6f23609562256F16884886341cEEA7a926639      | 0.0.1   |
+| Verifier16            | 0x083409136b251DC1A8c47958874C80197424dFdF      | 1.0.0   |
+| Verifier17            | 0xe3E689D1cb070713C88A18C3A13f266B4fD58778      | 1.0.0   |
+| Verifier18            | 0x727C8e95D76Feef514c1AF34d4CDAE61266FC2Ba      | 1.0.0   |
+| Verifier19            | 0x1c0966796C46C8e4230B9f4D1Fe151Efa1eB75fD      | 1.0.0   |
+| Verifier20            | 0x6a8DC73b21AE2A517BD3CFcf53CE32c89566BB6f      | 1.0.0   |
+| Verifier21            | 0x9b28bED203EDd813d6D278FC8AF9743CEeB081A0      | 1.0.0   |
+| Verifier22            | 0xb1a9662b07263CB7419eBa90fA7cF835ee686965      | 1.0.0   |
+| Verifier23            | 0x1CB9e127D7f25C2dE99de822B72B47da85a3D37E      | 1.0.0   |
+| Verifier24            | 0xf6CBd386fAE126414Ac3eAD9b6419Ed620f17446      | 1.0.0   |
+| Verifier25            | 0xc241533F9D0F9DEC506d5D8da68C430BAFd26e5A      | 1.0.0   |
+| Verifier26            | 0x0D47a2Ca986fCCAFCe7b93178383c64855241704      | 1.0.0   |
+| Verifier27            | 0x17aBCcd552D3D026dCfDA1BB1E3F4C107Fcb288b      | 1.0.0   |
+| Verifier28            | 0xE1F42c534828d93B31f21657F0bfe48C879A1107      | 1.0.0   |
+| Verifier29            | 0x38f81B60CAd3BD9eaE067Db896f315246f95D948      | 1.0.0   |
+| Verifier30            | 0x121Bd49eE3aa9Ad46E5C2e1Ac709Bd74969A04F3      | 1.0.0   |
+| Verifier31            | 0x6Dc6AC6320AA8af453648B09007b8F121fdD13E7      | 1.0.0   |
+| Verifier32            | 0xF9328111a2C3d81A581A18c4061Dd7DC27127A8a      | 1.0.0   |
+| PoseidonT3            | 0x07AfCA0456B59962588006a10895A15bCb751C71      | 1.0.0   |
+| ERC20Facet            | 0xaC71914E2A22f92d3F75106043aA4E7248Eda9C3      | 0.0.1   |
+| ERC721Facet           | 0x4FEbbDE06b713Ecb9829b771d3dc18bD1F9DcbBE      | 0.0.1   |
+| GuardianFacet         | 0xb5EAa5bA96DDab615d887aF331cc78D34B6AA353      | 0.0.1   |
+| RecoveryFacet         | 0x1A51d1C41be8a8A8F3092C65Ca0c3a0777a65f06      | 0.0.1   |
+| SemaphoreFacet        | 0x532E815c80198b78512858F4cf125be4858c5e9A      | 0.0.1   |
+| SemaphoreGroupsFacet  | 0x0c2B1dD90cba0cAf2777bE41f91a8Ac45B0e185c      | 0.0.1   |
+| SemaphoreVotingFacet  | 0x5a6A9c1412179ef061CDF328E6b66BB8c5F337B6      | 0.0.1   |
+| SimplicyWalletDiamond | 0x93Fb183E6aFcf5193CDdc3bB5dA1b511a9909dc6      | 0.0.1   |
+| WalletFactoryDiamond  | 0xB51049AffFA9C2DF44654BACC65A9aF45013a027      | 0.0.1   |
+| WalletFactoryFacet    | 0xF7A90fa8450b79F2727c5709Cc4Da4f1C03cA55e      | 0.0.1   |
+| SimplicyWalletDiamond | 0x8BeFc64AA83f6a822376D2fEd3BF928d870264Fb      | 0.0.1   |
+
+<a name="deployed-testet"/>
+
+### Testnet
 
  Name                   | Harmony One Testnet                             | Version |
 | :---                  | :---                                            |  :---   |
